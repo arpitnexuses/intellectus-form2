@@ -109,7 +109,7 @@ export default function InternshipPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5]">
+    <div className="min-h-screen bg-[#f7f7f7]">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-12 lg:grid-cols-2 lg:gap-16 lg:px-12">
         {/* Left Content Section */}
         <div className="space-y-8">
