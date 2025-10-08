@@ -67,8 +67,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Prepare logo image: attach /public/logo.webp as CID if available; fallback to inline SVG
-    const logoPath = path.join(process.cwd(), 'public', 'logo.webp')
+    // Prepare logo image: attach /public/logo.png as CID if available; fallback to inline SVG
+    const logoPath = path.join(process.cwd(), 'public', 'logo.png')
     let logoSrc = ''
     try {
       await fs.access(logoPath)
@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
           .container { background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); overflow: hidden; }
           .header { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); color: white; padding: 30px; text-align: center; }
           .logo { margin-bottom: 15px; }
-          .logo img { max-width: 220px; height: auto; display: block; margin: 0 auto; border-radius: 6px; }
+          .logo img { max-width: 220px; height: auto; display: block; margin: 0 auto; border-radius: 6px; background-color: #1e1e1e; padding: 10px; }
           .subtitle { font-size: 16px; opacity: 0.9; margin: 0; }
           .content { padding: 30px; }
           .title { color: #1a1a1a; font-size: 24px; margin-bottom: 25px; border-bottom: 2px solid #4285f4; padding-bottom: 10px; }
@@ -173,7 +173,7 @@ export async function POST(request: NextRequest) {
 
     const attachments: Mail.Attachment[] = []
     if (logoSrc.startsWith('cid:')) {
-      attachments.push({ filename: 'logo.webp', path: logoPath, cid: 'intellectus-logo', contentType: 'image/webp' })
+      attachments.push({ filename: 'logo.png', path: logoPath, cid: 'intellectus-logo', contentType: 'image/png' })
     }
     if (file && file.size > 0) {
       const buffer = Buffer.from(await file.arrayBuffer())
