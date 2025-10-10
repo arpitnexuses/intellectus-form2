@@ -114,16 +114,10 @@ export default function InternshipPage() {
         {/* Left Content Section */}
         <div className="space-y-8">
           <div>
-            <h1 className="mb-8 text-5xl font-bold text-foreground">Careers</h1>
-            <p className="mb-4 text-muted-foreground">Are you interested in helping innovators change the world?</p>
-            <p className="text-muted-foreground">
-              If you are smart, intellectually curious, empathetic and have a drive to help good people achieve
-              incredible outcomes, we&#39;d like to hear from you.
-            </p>
+            <h1 className="mb-8 text-5xl font-bold text-foreground">Our internship Program</h1>
           </div>
 
           <div>
-            <h2 className="mb-6 text-3xl font-semibold text-foreground">Our Internship Program</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
                 Our internship opportunities are aimed at high-performing university students and postgraduates
