@@ -114,7 +114,7 @@ export default function InternshipPage() {
         {/* Left Content Section */}
         <div className="space-y-8">
           <div>
-            <h1 className="mb-8 text-5xl font-bold text-foreground">Our internship Program</h1>
+            <h1 className="mb-8 text-5xl font-bold text-foreground">Our Internship Program</h1>
           </div>
 
           <div>
